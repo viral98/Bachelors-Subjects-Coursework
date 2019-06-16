@@ -1,0 +1,3 @@
+".\ifelse\ifelse.obj" 
+TO ".\ifelse\ifelse" 
+PRINT(".\ifelse.m51")

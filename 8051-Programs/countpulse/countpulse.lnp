@@ -1,0 +1,3 @@
+".\countpulse\countpulse.obj" 
+TO ".\countpulse\countpulse" 
+PRINT(".\countpulse.m51")

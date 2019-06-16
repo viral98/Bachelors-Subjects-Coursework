@@ -1,0 +1,3 @@
+".\togglebit\togglebit.obj" 
+TO ".\togglebit\togglebit" 
+PRINT(".\togglebit.m51")

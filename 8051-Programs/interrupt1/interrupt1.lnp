@@ -1,0 +1,3 @@
+".\interrupt1\interrupt.obj" 
+TO ".\interrupt1\interrupt1" 
+PRINT(".\interrupt1.m51")

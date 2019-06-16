@@ -1,0 +1,10 @@
+import sqlite3
+conn=sqlite3.connect("login.db")
+c=conn.cursor()
+c.execute("create table if not exists users(username text, password text)")
+c.execute("insert into users values('milind','milind')")
+c.execute("insert into users values('user','user')")
+c.execute("select * from users")
+print(c.fetchall())
+conn.commit()
+conn.close()

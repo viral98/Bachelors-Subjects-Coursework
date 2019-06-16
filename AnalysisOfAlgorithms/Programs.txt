@@ -1,0 +1,15 @@
+++--selection
++--insertion
++--Merge
++--quick
+binary
++--Prims
++--tsp
+*LCS
++--0/1 Knapsack
++--Job Sequence
+*Optimal Tape
+++--N queen
++--SumOfSubsets
++--Naive
+++--Rabin Karp

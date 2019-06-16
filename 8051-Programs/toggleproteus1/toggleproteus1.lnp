@@ -1,0 +1,3 @@
+".\toggleproteus1\toggleproteus1.obj" 
+TO ".\toggleproteus1\toggleproteus1" 
+PRINT(".\toggleproteus1.m51")

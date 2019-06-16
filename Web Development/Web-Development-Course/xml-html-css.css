@@ -1,0 +1,36 @@
+title{
+  display: block;
+  font-weight: bold;
+  background-color: #cdf;
+  }
+
+author {
+  display: inline;
+  margin: 2em 1em;
+  border: 4px solid #cdf;
+  padding: 0px 1em;
+  background-color: white;
+  }
+
+year {
+  display: inline;
+  margin-bottom: 1em;
+  }
+
+price {
+  display: inline;
+  font-weight: bold;
+  }
+
+price {
+  display: inline;
+  }
+
+
+price:after {
+  content: "$";
+  }
+
+author:before {
+  content: "MR ";
+  }

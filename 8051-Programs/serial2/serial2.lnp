@@ -1,0 +1,3 @@
+".\serial2\serial2.obj" 
+TO ".\serial2\serial2" 
+PRINT(".\serial2.m51")

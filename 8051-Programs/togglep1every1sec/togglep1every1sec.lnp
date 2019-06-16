@@ -1,0 +1,3 @@
+".\togglep1every1sec\togglep1every1sec.obj" 
+TO ".\togglep1every1sec\togglep1every1sec" 
+PRINT(".\togglep1every1sec.m51")

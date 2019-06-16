@@ -1,0 +1,3 @@
+".\shiftbitinport\shiftbitinport.obj" 
+TO ".\shiftbitinport\shiftbitinport" 
+PRINT(".\shiftbitinport.m51")

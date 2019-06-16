@@ -1,0 +1,3 @@
+".\bitshift\bitshift.obj" 
+TO ".\bitshift\bitshift" 
+PRINT(".\bitshift.m51")

@@ -1,0 +1,3 @@
+".\toggleswitch\toggleswitch.obj" 
+TO ".\toggleswitch\toggleswitch" 
+PRINT(".\toggleswitch.m51")

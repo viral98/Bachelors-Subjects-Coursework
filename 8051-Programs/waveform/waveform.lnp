@@ -1,0 +1,3 @@
+".\waveform\waveform.obj" 
+TO ".\waveform\waveform" 
+PRINT(".\waveform.m51")

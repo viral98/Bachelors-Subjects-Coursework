@@ -1,0 +1,3 @@
+".\keypad1\keypad1.obj" 
+TO ".\keypad1\keypad1" 
+PRINT(".\keypad1.m51")

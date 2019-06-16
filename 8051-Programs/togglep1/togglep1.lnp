@@ -1,0 +1,3 @@
+".\togglep1\togglep1.obj" 
+TO ".\togglep1\togglep1" 
+PRINT(".\togglep1.m51")

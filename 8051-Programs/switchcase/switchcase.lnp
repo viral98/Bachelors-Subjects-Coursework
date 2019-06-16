@@ -1,0 +1,3 @@
+".\switchcase\switchcase.obj" 
+TO ".\switchcase\switchcase" 
+PRINT(".\switchcase.m51")

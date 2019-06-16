@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+    <head><title>Calculator</title>
+        <style>
+                body{
+                    background-color: white;
+                }
+                .grid-container {
+                  display: grid;
+                  grid-template-columns: auto auto auto auto;
+                  background-color: rgb(32, 30, 32);
+                  padding:2px;
+               }
+                .grid-item {
+                  background-color:whitesmoke;
+                  border: 1px solid rgba(0, 0, 0, 0.8);
+                  padding: 30px;
+                  font-size: 30px;
+                  text-align: center;
+                   user-select: none; 
+                }
+                .grid-item:hover{
+                    background-image: linear-gradient(to right, #434343 0%, black 100%);
+                    color: whitesmoke;
+                }
+                #container{
+                    width: 25%;
+                    margin-left: 35%;
+                    margin-top: 25vh;
+
+                }
+                .display{
+                    
+                    border : 3px solid black;
+                     margin-bottom: 2px;
+                      min-height: 55px;
+                       padding-right: 3px ;
+                       font-size: 45px; 
+                       text-align: right;
+
+                }
+                .display2{
+                  border : 2px solid whitesmoke;
+                  margin-bottom: 2px;
+                  min-height: 55px;
+                  padding-right: 3px ;
+                  font-size: 45px; 
+                  text-align: right;
+                  background-color: #302d2d;
+                  color: whitesmoke;
+
+                }
+                
+                
+                </style>
+    </head>
+    <body >
+        
+        <div id="container">
+            <div id="display" class="display" ></div>
+            <div class="grid-container" >
+                    <div class="grid-item" id="one">1</div>
+                    <div class="grid-item" id="two">2</div>
+                    <div class="grid-item" id="three" >3</div>  
+                    <div class="grid-item operations" id="plus">+</div> 
+                    <div class="grid-item" id="four">4</div>
+                    <div class="grid-item" id="five">5</div>
+                    <div class="grid-item" id="six">6</div>
+                    <div class="grid-item operations" id="minus" >-</div>   
+                    <div class="grid-item" id="seven">7</div>
+                    <div class="grid-item" id="eight" >8</div>
+                    <div class="grid-item" id="nine" >9</div> 
+                    <div class="grid-item operations" id="mult" >*</div>  
+                    <div class="grid-item" id="cancel" >C</div>
+                    <div class="grid-item" id="zero" >0</div>
+                    <div class="grid-item" id="equalto" >=</div> 
+                    <div class="grid-item operations" id="divide" >/</div> 
+                  </div>
+        </div>
+    
+
+
+
+        <!---->
+        <script>
+            var mybuttons = document.querySelectorAll('.grid-item');
+            var done = false;
+            console.log(mybuttons);
+            for (var i=0 ; i< mybuttons.length;i++){
+                
+                 mybuttons[i].addEventListener('click', function(event){
+                        event.preventDefault();
+                        var x = this.textContent;
+                        console.log(x);
+                        switch(x){
+                            case "=" :  document.getElementById("display").innerHTML=eval(document.getElementById("display").textContent);
+                                        done = true;
+                                        document.getElementById("display").className="display2";
+                                        document.body.style.backgroundColor = "#302d2d"
+                                        break;
+                            case "C" :  document.body.style.backgroundColor = "white"
+                                        document.getElementById("display").className="display"
+                                        document.getElementById("display").innerHTML="";
+                                        done = false;
+                                        break;
+                            default:  document.body.style.backgroundColor = "white"
+                                      document.getElementById("display").className="display"
+                                      if(done)
+                                      {
+                                        document.getElementById("display").innerHTML="";
+                                      }
+                                      document.getElementById("display").innerHTML+=x;
+                                      done = false;
+                        }
+                        
+                });
+            }
+            
+        
+        </script>
+    </body>
+</html>

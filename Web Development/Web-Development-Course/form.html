@@ -1,0 +1,136 @@
+<html>
+    <head>
+    <title>form validation</title>
+    </head>
+    <body>
+        <form  action="" onsubmit="validate()">
+            Name<br>
+            <input type="text" id="uname">
+            <br>
+            Password<br>
+            <input type="password" id="passw">
+            <br>
+            Confirm Password<br>
+            <input type="password" id="cpassw">
+            <br>
+            Email<br>
+            <input type="text" id="email" >
+            <br>
+            Pincode<br>
+            <input type="text" id="pno" >
+            <br>
+            Phone<br>
+            <input type="text" id="phone">
+            <br>
+            <input type="submit">   
+        </form>
+        <script type="text/javascript">
+        function validate()
+        {
+            var pno=document.getElementById('pno').value
+            var email=document.getElementById('email').value
+            var uname=document.getElementById('uname').value
+            var passw=document.getElementById('passw').value
+            var cpassw=document.getElementById('cpassw').value
+            var phone=document.getElementById('phone').value
+     
+            if(uname=="")
+                {
+                    alert("username cannot be blank");
+                    document.getElementById('uname').focus();
+                     return false;
+                }
+            if(passw=="")
+                {
+                    alert("Password cannot ba empty");
+                    return false;
+                }
+            
+            else
+                {
+                    var regex = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+                    var res = regex.test(String(passw));
+                if(!res)
+                {
+                    alert("The password must contain 1)Atleast 1 lowercase alphaber 2) Atleast 1 Uppercase Alphabet 3)Atleast one number 4)Atleast one special character 5)Minimum length = 8");
+                    document.getElementById('passw').focus();
+                    return false;
+                }
+                    
+                }
+            if(passw!=cpassw)
+                {
+                    alert("passwords do not match");
+                    document.getElementById('cpassw').focus();
+                     return false;
+                    
+                }
+            
+            else if(cpassw=="")
+                {
+                    alert("pls confirm password");
+                    document.getElementById('cpassw').focus();
+                     return false;
+                }
+            
+            if(email=="")
+            {
+                alert("Email required!!");
+                document.getElementById('email').focus();
+                return false;
+            }
+            else
+            {
+                var regex = /[a-zA-Z0-9_\-]+@[a-zA-Z]+\.[a-z\.]+/i;
+                var res = regex.test(String(email));
+                if(!res)
+                {
+                    alert("Enter correct email format");
+                    document.getElementById('email').focus();
+                    return false;
+                }
+            }
+            
+            if(pno=="")
+            {
+                alert("Pincode required!!");
+                document.getElementById('pno').focus();
+                return false;
+            }
+            else
+            {
+                var regex = /[0-9]{6,6}/;
+                var res = regex.test(String(pno));
+                if(!res)
+                {
+                    alert("Enter a 6 digit pin no");
+                    document.getElementById('pno').focus();
+                    return false;
+                }
+            
+            }
+            
+            if(phone=="")
+                {
+                    alert("Enter phone number");
+                    document.getElementById('phone').focus();
+                    return false;
+                }
+            else{
+                var regex = /[0-9]{10,10}/;
+                var res = regex.test(String(phone));
+                if(!res)
+                {
+                    alert("Enter a 10 digit phone number");
+                    document.getElementById('phone').focus();
+                    return false;
+                }
+            }    
+            
+          
+        }
+           
+        </script>
+
+    </body>
+</html>

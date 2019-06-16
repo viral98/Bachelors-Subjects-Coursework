@@ -1,0 +1,3 @@
+".\level1\level1.obj" 
+TO ".\level1\level1" 
+PRINT(".\level1.m51")
